@@ -18,6 +18,17 @@ import image6 from "../../assets/image06.png";
 import image7 from "../../assets/image07.png";
 import image8 from "../../assets/5.png";
 
+import media from "../../assets/sidebar/Import.png";
+import crop from "../../assets/sidebar/Crop.png";
+import text from "../../assets/sidebar/Lowercase (1).png";
+import image from "../../assets/sidebar/Image File.png";
+import element from "../../assets/sidebar/Apps.png";
+import sounds from "../../assets/sidebar/Audio.png";
+import layers from "../../assets/sidebar/Layers.png";
+import template from "../../assets/sidebar/Prototype.png";
+import more from "../../assets/sidebar/More.png";
+import help from "../../assets/sidebar/Help.png";
+
 const images = [image1, image2, image3, image4, image5, image6, image7, image8];
 
 const MemeEditor = () => {
@@ -164,8 +175,54 @@ const MemeEditor = () => {
 
   return (
     <div className="grid grid-cols-12 h-screen">
-      <div className="bg-[#191919] col-span-2">01</div>
-      <div className="bg-[#191919] col-span-8 flex justify-center border border-[#535353]">
+      <div className="bg-[#191919] col-span-1 flex flex-col pt-4 border-t border-[#535353]">
+        <div className="text-[#fff] flex items-center gap-4 mb-6 px-2">
+          <img src={media} alt="Description" />
+          <p>Media</p>
+        </div>
+
+        <div className="text-[#fff] flex items-center gap-4 mb-6 px-2">
+          <img src={crop} alt="Description" />
+          <p>Crop</p>
+        </div>
+
+        <div className="text-[#fff] flex items-center gap-4 mb-6 px-2 bg-[#424242] py-2">
+          <img src={text} alt="Description" />
+          <p>Text</p>
+        </div>
+
+        <div className="text-[#fff] flex items-center gap-4 mb-6 px-2">
+          <img src={image} alt="Description" />
+          <p>Image</p>
+        </div>
+
+        <div className="text-[#fff] flex items-center gap-4 mb-6 px-2">
+          <img src={element} alt="Description" />
+          <p>Element</p>
+        </div>
+
+        <div className="text-[#fff] flex items-center gap-4 mb-6 px-2">
+          <img src={sounds} alt="Description" />
+          <p>Sounds</p>
+        </div>
+
+        <div className="text-[#fff] flex items-center gap-4 mb-6 px-2">
+          <img src={layers} alt="Description" />
+          <p>Layers</p>
+        </div>
+
+        <div className="text-[#fff] flex items-center gap-4 mb-6 px-2">
+          <img src={template} alt="Description" />
+          <p>Template</p>
+        </div>
+
+        <div className="text-[#fff] flex items-center gap-4 mb-6 px-3">
+          <img src={more} alt="Description" />
+          <p>More</p>
+        </div>
+      </div>
+
+      <div className="bg-[#191919] col-span-9 flex justify-center border border-[#535353]">
         <div>
           <div style={{ position: "relative", width: "500px" }}>
             <div
@@ -224,7 +281,7 @@ const MemeEditor = () => {
         </div>
       </div>
 
-      <div className="bg-[#191919] col-span-2">
+      <div className="bg-[#191919] col-span-2 border-t border-[#535353]">
         <div className="flex items-center gap-6 mb-6">
           <img src={TextIcon} alt="My Image" />
           <p className="self-end text-white">Text</p>

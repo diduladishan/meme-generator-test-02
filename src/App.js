@@ -13,6 +13,7 @@ function App() {
       {/* <NavBar /> */}
       {/* <Router /> */}
       {/* <MemeGenerator /> */}
+      <NavBar />
       <MemeEditor />
     </div>
   );
