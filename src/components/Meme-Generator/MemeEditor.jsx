@@ -284,7 +284,7 @@ const MemeEditor = () => {
                   ))}
                 </>
               ) : (
-                <div className="bg-[#543] w-full">
+                <div className="w-full">
                   <ImageSelector onImageSelect={handleImageSelect} />
                 </div>
               )}
@@ -324,7 +324,7 @@ const MemeEditor = () => {
       </div>
 
       <div className="bg-[#191919] col-span-2 border-t border-[#535353]">
-        <div className="flex items-center gap-6 mb-6">
+        <div className="flex items-center gap-6 mb-6 px-4 mt-4">
           <img src={TextIcon} alt="My Image" />
           <p className="self-end text-white">Text</p>
         </div>
@@ -372,7 +372,7 @@ const MemeEditor = () => {
             </div>
           )}
 
-          <div className="self-end">
+          {/* <div className="self-end">
             <button
               className="bg-[#8B0000] text-white py-2 px-4 rounded-md mt-4"
               onClick={handleDownloadMeme}
@@ -381,16 +381,28 @@ const MemeEditor = () => {
               <MdDownloadForOffline className="inline mr-2" />
               Download
             </button>
-          </div>
+          </div> */}
         </div>
 
-        <button
-          className="bg-[#8B0000] text-white py-2 px-4 rounded-md mt-4"
-          onClick={() => setSelectedImage(null)} // Option to clear the image
-        >
-          <MdImage className="inline mr-2" />
-          Change Image
-        </button>
+        <div className="flex items-center justify-center gap-4">
+          <div className="self-end">
+            <button
+              className="bg-[#9bc921] text-white py-2 px-4 rounded-md mt-4"
+              onClick={handleDownloadMeme}
+              disabled={!selectedImage}
+            >
+              <MdDownloadForOffline className="inline mr-2" />
+              Download
+            </button>
+          </div>
+          <button
+            className="bg-[#5f5f5f] text-white py-2 px-4 rounded-md mt-4"
+            onClick={() => setSelectedImage(null)} // Option to clear the image
+          >
+            <MdImage className="inline mr-2" />
+            Change Image
+          </button>
+        </div>
       </div>
     </div>
   );

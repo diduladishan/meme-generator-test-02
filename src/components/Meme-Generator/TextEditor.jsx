@@ -36,14 +36,14 @@ const TextEditor = ({
           className="bg-[#40813f] py-1 px-2 rounded-md flex items-center justify-center gap-2"
         >
           <MdAddToPhotos className="text-[18px]" />
-          Add More Text
+          Add
         </button>
         <button
           onClick={onDeleteText}
           className="bg-[#e5342f] py-1 px-2 rounded-md flex items-center justify-center gap-2"
         >
           <MdDeleteForever className="text-[18px]" />
-          Delete Text
+          Delete
         </button>
       </div>
 
