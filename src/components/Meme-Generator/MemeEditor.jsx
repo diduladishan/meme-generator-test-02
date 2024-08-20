@@ -224,7 +224,17 @@ const MemeEditor = () => {
 
       <div className="bg-[#191919] col-span-9 flex justify-center border border-[#535353]">
         <div>
-          <div style={{ position: "relative", width: "500px" }}>
+          <p className="text-[#fff] pl-[40px] mb-4 text-[22px] mt-6">
+            Meme Template
+          </p>
+          <div
+            style={{
+              position: "relative",
+              width: "",
+              paddingLeft: "40px",
+              paddingRight: "40px",
+            }}
+          >
             <div
               ref={memeRef}
               style={{ position: "relative", display: "inline-block" }}
@@ -274,8 +284,40 @@ const MemeEditor = () => {
                   ))}
                 </>
               ) : (
-                <ImageSelector onImageSelect={handleImageSelect} />
+                <div className="bg-[#543] w-full">
+                  <ImageSelector onImageSelect={handleImageSelect} />
+                </div>
               )}
+            </div>
+          </div>
+
+          {/* resolution section starts here */}
+          <div class="px-4 bg-[#424242] h-[500px] mt-8 flex items-center justify-center mx-6">
+            <div className="">
+              <h1 class="text-3xl text-center  text-white">Select Your Meme</h1>
+              <div className="flex justify-center">
+                <div className="border-b border-[#aaaaaa] w-[600px] flex justify-center my-3"></div>
+              </div>
+              <p class="text-center text-white mb-6">
+                Start with a blank canvas
+              </p>
+              <div class="flex justify-center space-x-4">
+                <button class="bg-gray-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+                  21:9
+                </button>
+                <button class="bg-gray-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+                  16:9
+                </button>
+                <button class="bg-gray-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+                  1:1
+                </button>
+                <button class="bg-gray-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+                  4:5
+                </button>
+                <button class="bg-gray-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+                  9:16
+                </button>
+              </div>
             </div>
           </div>
         </div>

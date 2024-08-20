@@ -83,12 +83,13 @@ const ImageSelector = ({ onImageSelect }) => {
             src={image}
             alt={`Meme ${index}`}
             style={{
-              width: "20%",
+              width: "calc(20% - 10px)", // Adjust width to account for margin
               height: "auto",
               flexShrink: 0,
               cursor: "pointer",
               border: "1px solid #ccc",
               borderRadius: "4px",
+              marginRight: "30px", // Add margin between images
             }}
             onClick={() => handleSelect(image)}
           />
